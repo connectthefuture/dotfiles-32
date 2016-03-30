@@ -1,36 +1,14 @@
 [
-  // Ctrl+p
+  // Ctrl+shift+i: same folder
   {
-    "keys": [" ", "j"],
-    "command": "show_overlay",
-    "args": {
-      "overlay": "goto",
-      "show_files": true
-    },
-    "context": [{ "key": "vi_command_mode_aware" }]
-  },
-
-  // Ctrl+p: same folder
-  {
-    "keys": [" ", "i"],
+    "keys": ["ctrl+shift+i"],
     "command": "show_overlay_folder",
-    "context": [{ "key": "vi_command_mode_aware" }]
-  },
-
-  // Ctrl+Shift+p
-  {
-    "keys": [" ", "k"],
-
-    "command": "show_overlay",
-    "args": {
-      "overlay": "command_palette"
-    },
     "context": [{ "key": "vi_command_mode_aware" }]
   },
 
   // Ctrl+p: controllers
   {
-    "keys": [" ", "r", "c"],
+    "keys": ["ctrl+shift+r", "c"],
     "command": "show_overlay",
     "args": {
       "overlay": "goto",
@@ -42,7 +20,7 @@
 
   // Ctrl+p: models
   {
-    "keys": [" ", "r", "m"],
+    "keys": ["ctrl+shift+r", "m"],
     "command": "show_overlay",
     "args": {
       "overlay": "goto",
@@ -83,15 +61,8 @@
 
   // Generic: toggle menu
   {
-    "keys": [" ", "m", "m"],
+    "keys": ["ctrl+shift+m", "ctrl+shift+m"],
     "command": "toggle_menu",
-    "context": [{ "key": "vi_command_mode_aware" }]
-  },
-
-  // Generic: select sprite
-  {
-    "keys": [" ", "s", "s"],
-    "command": "select_sprite",
     "context": [{ "key": "vi_command_mode_aware" }]
   },
 
@@ -109,20 +80,9 @@
   //   "context": [{ "key": "vi_command_mode_aware" }]
   // },
 
-  // Generic: goto @
-  {
-    "keys": [" ", "r", "r"],
-    "command": "show_overlay",
-    "args": {
-      "overlay": "goto",
-      "text": "@"
-    },
-    "context": [{ "key": "vi_command_mode_aware" }]
-  },
-
   // Generic: change quotes
   {
-    "keys": [" ", "t", "q"],
+    "keys": ["ctrl+shift+t", "q"],
     "command": "change_quotes",
     "context": [{ "key": "vi_command_mode_aware" }]
   },
@@ -229,27 +189,20 @@
 
   // ChangeList: show
   {
-    "keys": [" ", "e"],
-    "command": "show_change_list",
-    "context": [{ "key": "vi_command_mode_aware" }]
-  },
-
-  // ChangeList: show
-  {
     "keys": ["ctrl+e"],
     "command": "show_change_list"
   },
 
   // Files: new
   {
-    "keys": [" ", "f", "n"],
+    "keys": ["ctrl+shift+f", "n"],
     "command": "advanced_new_file",
     "context": [{ "key": "vi_command_mode_aware" }]
   },
 
   // Files: delete
   {
-    "keys": [" ", "f", "x"],
+    "keys": ["ctrl+shift+f", "x"],
     "command": "advanced_new_file_delete",
     "args": { "current": true },
     "context": [{ "key": "vi_command_mode_aware" }]
@@ -257,71 +210,43 @@
 
   // Files: move
   {
-    "keys": [" ", "f", "m"],
+    "keys": ["ctrl+shift+f", "m"],
     "command": "side_bar_move",
     "context": [{ "key": "vi_command_mode_aware" }]
   },
 
   // Files: rename
   {
-    "keys": [" ", "f", "r"],
+    "keys": ["ctrl+shift+f", "r"],
     "command": "side_bar_rename",
     "context": [{ "key": "vi_command_mode_aware" }]
   },
 
   // Files: reopen last closed
   {
-    "keys": [" ", "f", "o"],
+    "keys": ["ctrl+shift+f", "o"],
     "command": "reopen_last_file",
-    "context": [{ "key": "vi_command_mode_aware" }]
-  },
-
-  // Files: close
-  {
-    "keys": [" ", "x"],
-    "command": "close_file",
-    "context": [{ "key": "vi_command_mode_aware" }]
-  },
-
-  // Files: save
-  {
-    "keys": [" ", "s"],
-    "command": "save",
     "context": [{ "key": "vi_command_mode_aware" }]
   },
 
   // Files: close all
   {
-    "keys": [" ", "f", "a"],
+    "keys": ["ctrl+shift+f", "a"],
     "command": "close_all",
     "context": [{ "key": "vi_command_mode_aware" }]
   },
 
   // Files: duplicate file
   {
-    "keys": [" ", "f", "u"],
+    "keys": ["ctrl+shift+f", "u"],
     "command": "side_bar_duplicate",
     "context": [{ "key": "vi_command_mode_aware" }]
   },
 
   // Files: find
   {
-    "keys": [" ", "f", "f"],
+    "keys": ["ctrl+shift+f", "f"],
     "command": "search_in_project",
-    "context": [{ "key": "vi_command_mode_aware" }]
-  },
-
-  // Texts: transform to uppercase
-  {
-    "keys": [" ", "t", "u"],
-    "command": "upper_case",
-    "context": [{ "key": "vi_command_mode_aware" }]
-  },
-
-  // Texts: transform to uppercase
-  {
-    "keys": [" ", "t", "l"],
-    "command": "lower_case",
     "context": [{ "key": "vi_command_mode_aware" }]
   },
 
@@ -411,14 +336,14 @@
     ]
   },
 
-  // Search: open all
-  {
-    "keys": [" ", "o"],
-    "command": "find_in_files_open_all_files",
-    "context": [
-      { "key": "selector", "operator": "equal", "operand": "text.find-in-files" }
-    ]
-  },
+  // // Search: open all
+  // {
+  //   "keys": [" ", "o"],
+  //   "command": "find_in_files_open_all_files",
+  //   "context": [
+  //     { "key": "selector", "operator": "equal", "operand": "text.find-in-files" }
+  //   ]
+  // },
 
   // Search: navigate down
   {
@@ -454,18 +379,18 @@
     }
   },
 
-  // Sidebar: focus
-  {
-    "keys": [" ", "d"],
-    "command": "focus_side_bar",
-    "context": [
-      { "key": "vi_command_mode_aware" }
-    ]
-  },
+  // // Sidebar: focus
+  // {
+  //   "keys": ["ctrl+shift+a", "d"],
+  //   "command": "focus_side_bar",
+  //   "context": [
+  //     { "key": "vi_command_mode_aware" }
+  //   ]
+  // },
 
   // Templates: Toggle wrap
   {
-    "keys": [" ", "t", "w"],
+    "keys": ["ctrl+shift+t", "w"],
     "command": "toggle_template_wrap",
     "context": [
       { "key": "selector", "operator": "equal", "operand": "source.emblem" },

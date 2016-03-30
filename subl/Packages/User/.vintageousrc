@@ -1,8 +1,37 @@
-:let mapleader=\
+:let mapleader=<Space>
 
 :map ; :
 :map Y y$
 :map [ ^
 :map ] $
-:nmap <Leader>' 0vi'p0
-:nmap <Leader>\ <C-P>
+:map <cr> \
+:map <Leader>' 0vi'p0
+
+:map <Leader>j <C-p>
+:map <Leader>k <C-P>
+:map <Leader>i <C-I>
+:map <Leader>rc <C-R>c
+:map <Leader>rm <C-R>m
+
+' Toggles
+:map <Leader>mm <C-M><C-M>
+:map <Leader>tq <C-T>q
+:map <Leader>tw <C-T>w
+:map <Leader>tb <C-T>b
+
+' ChangeList: show
+:map <Leader>e <C-e>
+
+' Files
+:map <Leader>fx <C-F>x
+:map <Leader>fm <C-F>m
+:map <Leader>fr <C-F>r
+:map <Leader>fo <C-F>o
+:map <Leader>ff <C-F>f
+
+' Close/save
+:map <Leader>x <C-w>
+:map <Leader>s <C-s>
+
+' YAML copy
+:map <Leader>c <C-C>

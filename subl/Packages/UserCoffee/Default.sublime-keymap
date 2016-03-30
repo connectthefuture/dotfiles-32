@@ -1,7 +1,7 @@
 [
   // Coffee: Toggle function brackets
   {
-    "keys": [" ", "t", "b"],
+    "keys": ["ctrl+shift+t", "b"],
     "command": "toggle_coffee_brackets",
     "context": [
       { "key": "selector", "operator": "equal", "operand": "source.coffee" },
